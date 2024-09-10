@@ -1,8 +1,8 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
-        bitbot.rotate(BBRobotDirection.Left, 80)
+        bitbot.rotate(BBRobotDirection.Left, 50)
     } else if (receivedNumber == 2) {
-        bitbot.rotate(BBRobotDirection.Right, 80)
+        bitbot.rotate(BBRobotDirection.Right, 50)
     } else if (receivedNumber == 3) {
         bitbot.go(BBDirection.Forward, 80)
     } else if (receivedNumber == 4) {
@@ -35,7 +35,7 @@ basic.forever(function () {
             . . . # .
             . . # . .
             `,0)
-    } else if (input.rotation(Rotation.Pitch) < -30) {
+    } else if (input.rotation(Rotation.Pitch) < -25) {
         radio.sendNumber(3)
         basic.showLeds(`
             . . # . .
@@ -44,7 +44,7 @@ basic.forever(function () {
             . . # . .
             . . # . .
             `,0)
-    } else if (input.rotation(Rotation.Pitch) > 30) {
+    } else if (input.rotation(Rotation.Pitch) > 25) {
         radio.sendNumber(4)
         basic.showLeds(`
             . . # . .
