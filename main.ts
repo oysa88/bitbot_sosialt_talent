@@ -1,8 +1,8 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
-        bitbot.rotate(BBRobotDirection.Left, 50)
+        bitbot.rotate(BBRobotDirection.Left, 40)
     } else if (receivedNumber == 2) {
-        bitbot.rotate(BBRobotDirection.Right, 50)
+        bitbot.rotate(BBRobotDirection.Right, 40)
     } else if (receivedNumber == 3) {
         bitbot.go(BBDirection.Forward, 80)
     } else if (receivedNumber == 4) {
@@ -12,7 +12,8 @@ radio.onReceivedNumber(function (receivedNumber) {
     }
 })
 bitbot.ledRainbow(true, BBArms.Both)
-let radioGruppe = 42
+let radioGruppe = 1
+radio.setTransmitPower(7)
 radio.setGroup(radioGruppe)
 basic.showNumber(radioGruppe)
 basic.clearScreen()
