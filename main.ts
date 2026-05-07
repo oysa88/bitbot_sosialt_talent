@@ -1,18 +1,20 @@
 radio.onReceivedNumber(function (receivedNumber) {
     if (receivedNumber == 1) {
-        bitbot.rotate(BBRobotDirection.Left, 40)
+        bitbot.rotate(BBRobotDirection.Left, fart / 2)
     } else if (receivedNumber == 2) {
-        bitbot.rotate(BBRobotDirection.Right, 40)
+        bitbot.rotate(BBRobotDirection.Right, fart / 2)
     } else if (receivedNumber == 3) {
-        bitbot.go(BBDirection.Forward, 80)
+        bitbot.go(BBDirection.Forward, fart)
     } else if (receivedNumber == 4) {
-        bitbot.go(BBDirection.Reverse, 80)
+        bitbot.go(BBDirection.Reverse, fart)
     } else {
         bitbot.go(BBDirection.Forward, 0)
     }
 })
+let fart = 0
 bitbot.ledRainbow(true, BBArms.Both)
 let radioGruppe = 1
+fart = 100
 radio.setTransmitPower(7)
 radio.setGroup(radioGruppe)
 basic.showNumber(radioGruppe)
